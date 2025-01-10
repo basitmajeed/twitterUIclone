@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/output.css" />
+        <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <title>Home / X</title>
+    </head>
+    <body class="bg-black text-white m-0 p-0">
+        <main class="flex h-screen overflow-y-auto">
+            <!-- LEFT PANE -->
+            <div
+                class="left sticky top-0 h-screen flex-col items-start p-3 gap-2 border-r-[0.5px] border-gray-500 hidden md:flex w-[72px] xl:w-auto"
+            >
+                <!-- Navigation Icons -->
+                <ul class="flex flex-col items-start gap-2 flex-grow font-bold">
+                    <!-- Logo -->
+                    <li class="flex items-center justify-center p-2">
+                        <img
+                            src="images/logo.svg"
+                            class="invert"
+                            alt="Logo"
+                            width="30"
+                            height="30"
+                        />
+                    </li>
+
+                    <!-- Navigation Items -->
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">home</i>
+                        <span class="hidden xl:inline">Home</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">search</i>
+                        <span class="hidden xl:inline">Explore</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">notifications</i>
+                        <span class="hidden xl:inline">Notifications</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">mail</i>
+                        <span class="hidden xl:inline">Messages</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">workspace_premium</i>
+                        <span class="hidden xl:inline">Grok</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">group</i>
+                        <span class="hidden xl:inline">Communities</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <img src="images/logo.svg" class="invert" width="25" />
+                        <span class="hidden xl:inline">Premium</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">flash_on</i>
+                        <span class="hidden xl:inline">Verified Orgs</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">person</i>
+                        <span class="hidden xl:inline">Profile</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 hover:bg-gray-900 rounded-3xl p-2"
+                    >
+                        <i class="material-icons">more_horiz</i>
+                        <span class="hidden xl:inline">More</span>
+                    </li>
+
+                    <!-- Post Button (Only visible on xl screens) -->
+                    <li
+                        class="flex justify-center text-center items-center gap-4 hover:bg-gray-900 rounded-3xl p-2 mt-2 xl:block hidden"
+                    >
+                        <button
+                            class="bg-white text-black w-12 h-12 xl:w-60 xl:py-3 font-bold rounded-full xl:rounded-3xl text-lg"
+                        >
+                            <span class="hidden xl:inline">Post</span>
+                            <i class="material-icons xl:hidden">edit</i>
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Profile Section (Align to bottom with mt-auto) -->
+                <div
+                    class="profile flex items-center gap-4 hover:bg-gray-900 rounded-full p-3 mt-auto"
+                >
+                    <!-- Profile Picture -->
+                    <div class="profile-image">
+                        <img
+                            src="https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg"
+                            alt="Profile Picture"
+                            width="50"
+                            class="rounded-full"
+                        />
+                    </div>
+
+                    <!-- Handle and more icon (Visible only on larger screens) -->
+                    <div class="handle hidden xl:flex flex-col gap-0">
+                        <p class="font-bold">Lorem Ipsum</p>
+                        <p class="text-gray-500">@loremipsum</p>
+                    </div>
+                    <div class="extra hidden xl:block">
+                        <i class="material-icons">more_horiz</i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ICON BAR (Visible only on screens <= 768px) -->
+            <div
+                class="bottom-icons fixed bottom-0 left-0 right-0 bg-black flex justify-around py-3 px-4 gap-4 md:hidden"
+            >
+                <i class="material-icons text-white">home</i>
+                <i class="material-icons text-white">search</i>
+                <i class="material-icons text-white">notifications</i>
+                <i class="material-icons text-white">mail</i>
+                <i class="material-icons text-white">workspace_premium</i>
+                <i class="material-icons text-white">group</i>
+            </div>
+
+            <!-- MIDDLE AND RIGHT PANE CONTAINER -->
+            <div
+                class="scrollable scroll-container flex w-full overflow-y-scroll h-screen"
+            >
+                <!-- MIDDLE PANE -->
+                <div
+                    class="middle w-full md:w-[80%] border-r-[0.5px] border-gray-500"
+                >
+                    <!-- New Bar Above the Top Bar (visible up to 768px) -->
+                    <div
+                        class="topbar-secondary sticky top-0 bg-black flex justify-between items-center p-4 md:hidden"
+                    >
+                        <!-- Profile Image on the Left -->
+                        <div class="flex items-center gap-3">
+                            <img
+                                src="https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg"
+                                alt="Profile"
+                                width="40"
+                                class="rounded-full"
+                            />
+                        </div>
+                        <!-- X Logo in the Middle -->
+                        <div class="flex justify-center flex-grow">
+                            <img
+                                src="images/logo.svg"
+                                alt="X Logo"
+                                class="invert h-6"
+                            />
+                        </div>
+                        <!-- Upgrade Button on the Right -->
+                        <button
+                            class="border border-gray-500 font-bold text-white px-4 py-2 rounded-full"
+                        >
+                            Upgrade
+                        </button>
+                    </div>
+
+                    <!-- TOP BAR -->
+                    <div
+                        class="topbar sticky top-0 bg-black flex justify-center border-b-[0.5px] border-gray-500 items-center text-center"
+                    >
+                        <p
+                            class="w-full p-4 hover:bg-gray-900 font-bold underline underline-offset-[20px] decoration-blue-400"
+                        >
+                            For you
+                        </p>
+                        <p
+                            class="w-full p-4 hover:bg-gray-900 font-bold text-gray-500"
+                        >
+                            Following
+                        </p>
+                    </div>
+
+                    <!-- POST AREA (hidden below 768px) -->
+                    <div
+                        class="post flex gap-3 p-5 pb-1 border-b-[0.5px] border-b-gray-500 md:block hidden"
+                    >
+                        <!-- Write Box Section (Profile Image, Text Box, and Everyone can reply stacked) -->
+                        <div class="write w-full flex items-start gap-3">
+                            <!-- Profile Image (Side by side with Text Box) -->
+                            <div class="image">
+                                <img
+                                    src="https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg"
+                                    width="40"
+                                    class="rounded-full"
+                                />
+                            </div>
+
+                            <!-- Text Box and Everyone can reply stacked vertically -->
+                            <div class="flex flex-col w-full gap-1">
+                                <input
+                                    type="text"
+                                    class="outline-none bg-black placeholder:text-xl w-full"
+                                    placeholder="What is happening?!"
+                                    id="postTextBox"
+                                />
+
+                                <!-- Everyone can reply section (side by side with icon) -->
+                                <div
+                                    class="gap-1 my-4 text-blue-400 text-sm items-center hidden"
+                                    id="everyoneReply"
+                                >
+                                    <i class="material-icons">public</i>
+                                    <p>Everyone can reply</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Buttons Section (Icons and Post Button) -->
+                        <div
+                            class="bottom-buttons flex items-center justify-between"
+                        >
+                            <!-- Icons -->
+                            <div class="icons flex gap-4 text-blue-400 my-4">
+                                <i class="material-icons">image</i>
+                                <i class="material-icons">gif_box</i>
+                                <i class="material-icons">workspace_premium</i>
+                                <i class="material-icons"
+                                    >format_list_bulleted</i
+                                >
+                                <i class="material-icons"
+                                    >sentiment_satisfied</i
+                                >
+                                <i class="material-icons">pending_actions</i>
+                                <i class="material-icons text-blue-950"
+                                    >location_on</i
+                                >
+                            </div>
+
+                            <!-- Post Button -->
+                            <button
+                                class="bg-gray-500 p-2 px-5 rounded-full font-bold text-black"
+                                id="postButton"
+                            >
+                                Post
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SCROLLABLE POSTS -->
+                    <div class="posts">
+                        <!-- POST 1 -->
+                        <div
+                            class="post p-5 flex gap-3 w-full border-b-[0.5px] border-b-gray-500"
+                        >
+                            <div class="profile">
+                                <img
+                                    src="https://picsum.photos/40"
+                                    width="42"
+                                    class="rounded-full"
+                                />
+                            </div>
+                            <div
+                                class="content gap-4 flex-col justify-center items-center"
+                            >
+                                <div
+                                    class="userHandle flex items-center justify-between"
+                                >
+                                    <div class="left flex items-center gap-2">
+                                        <p class="font-bold text-m">John Doe</p>
+                                        <p class="text-gray-500 text-sm">
+                                            @johndoe • 20h
+                                        </p>
+                                    </div>
+                                    <i
+                                        class="material-icons cursor-pointer text-gray-500 hover:text-blue-500"
+                                        >more_horiz</i
+                                    >
+                                </div>
+                                <div class="caption pb-4">
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Amet earum omnis quibusdam
+                                    facere nesciunt praesentium?
+                                </div>
+                                <div class="media pb-4">
+                                    <img
+                                        src="https://picsum.photos/600/300"
+                                        class="rounded-2xl"
+                                    />
+                                </div>
+                                <div
+                                    class="actions flex items-center justify-between text-sm text-gray-500"
+                                >
+                                    <p
+                                        class="flex items-center hover:text-blue-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">maps_ugc</i>
+                                        61
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-green-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">repeat</i>
+                                        1.1k
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-red-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">favorite</i>
+                                        14k
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-blue-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">equalizer</i>
+                                        440k
+                                    </p>
+                                    <div class="extra flex items-center gap-2">
+                                        <i
+                                            class="material-icons hover:text-blue-400 cursor-pointer"
+                                            >bookmark</i
+                                        >
+                                        <i
+                                            class="material-icons hover:text-blue-400 cursor-pointer"
+                                            >present_to_all</i
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- POST 2 -->
+                        <div
+                            class="post p-5 flex gap-3 w-full border-b-[0.5px] border-b-gray-500"
+                        >
+                            <div class="profile">
+                                <img
+                                    src="https://picsum.photos/41"
+                                    width="43"
+                                    class="rounded-full"
+                                />
+                            </div>
+                            <div
+                                class="content gap-4 flex-col justify-center items-center"
+                            >
+                                <div
+                                    class="userHandle flex items-center justify-between"
+                                >
+                                    <div class="left flex items-center gap-2">
+                                        <p class="font-bold text-m">John Doe</p>
+                                        <p class="text-gray-500 text-sm">
+                                            @johndoe • 20h
+                                        </p>
+                                    </div>
+                                    <i
+                                        class="material-icons cursor-pointer text-gray-500 hover:text-blue-500"
+                                        >more_horiz</i
+                                    >
+                                </div>
+                                <div class="caption pb-4">
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Amet earum omnis quibusdam
+                                    facere nesciunt praesentium?
+                                </div>
+                                <div class="media pb-4"></div>
+                                <div
+                                    class="actions flex items-center justify-between text-sm text-gray-500"
+                                >
+                                    <p
+                                        class="flex items-center hover:text-blue-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">maps_ugc</i>
+                                        61
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-green-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">repeat</i>
+                                        1.1k
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-red-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">favorite</i>
+                                        14k
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-blue-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">equalizer</i>
+                                        440k
+                                    </p>
+                                    <div class="extra flex items-center gap-2">
+                                        <i
+                                            class="material-icons hover:text-blue-400 cursor-pointer"
+                                            >bookmark</i
+                                        >
+                                        <i
+                                            class="material-icons hover:text-blue-400 cursor-pointer"
+                                            >present_to_all</i
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- POST 3 -->
+                        <div
+                            class="post p-5 flex gap-3 w-full border-b-[0.5px] border-b-gray-500"
+                        >
+                            <div class="profile">
+                                <img
+                                    src="https://picsum.photos/44"
+                                    width="40"
+                                    class="rounded-full"
+                                />
+                            </div>
+                            <div
+                                class="content gap-4 flex-col justify-center items-center"
+                            >
+                                <div
+                                    class="userHandle flex items-center justify-between"
+                                >
+                                    <div class="left flex items-center gap-2">
+                                        <p class="font-bold text-m">John Doe</p>
+                                        <p class="text-gray-500 text-sm">
+                                            @johndoe • 20h
+                                        </p>
+                                    </div>
+                                    <i
+                                        class="material-icons cursor-pointer text-gray-500 hover:text-blue-500"
+                                        >more_horiz</i
+                                    >
+                                </div>
+                                <div class="caption pb-4">
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Amet earum omnis quibusdam
+                                    facere nesciunt praesentium?
+                                </div>
+                                <div class="media pb-4">
+                                    <img
+                                        src="https://picsum.photos/600/400"
+                                        class="rounded-2xl"
+                                    />
+                                </div>
+                                <div
+                                    class="actions flex items-center justify-between text-sm text-gray-500"
+                                >
+                                    <p
+                                        class="flex items-center hover:text-blue-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">maps_ugc</i>
+                                        61
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-green-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">repeat</i>
+                                        1.1k
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-red-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">favorite</i>
+                                        14k
+                                    </p>
+                                    <p
+                                        class="flex items-center hover:text-blue-400 cursor-pointer"
+                                    >
+                                        <i class="material-icons">equalizer</i>
+                                        440k
+                                    </p>
+                                    <div class="extra flex items-center gap-2">
+                                        <i
+                                            class="material-icons hover:text-blue-400 cursor-pointer"
+                                            >bookmark</i
+                                        >
+                                        <i
+                                            class="material-icons hover:text-blue-400 cursor-pointer"
+                                            >present_to_all</i
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT PANE -->
+                <div
+                    class="right w-2/6 px-5 py-3 border-l-[0.5px] border-gray-500 sticky top-0 self-start h-fit max-lg:hidden"
+                >
+                    <!-- SEARCH BAR -->
+                    <div
+                        class="flex items-center gap-2 text-gray-500 rounded-full border-[1px] border-gray-500 p-2 mb-6"
+                        id="searchBar"
+                    >
+                        <i class="material-icons">search</i>
+                        <input
+                            type="tex"
+                            id="searchBox"
+                            placeholder="Search"
+                            class="outline-none bg-black"
+                        />
+                    </div>
+
+                    <!-- WHAT'S HAPPENING CARD -->
+                    <div
+                        class="flex-col gap-3 border-[0.5px] border-gray-500 rounded-xl p-2 px-4 mb-6"
+                        id="whatsHappening"
+                    >
+                        <h1 class="font-bold text-xl mb-3">What's happening</h1>
+                        <!-- TOP ARTIST -->
+                        <div
+                            class="topArtist flex gap-3 rounded-2xl mb-3 hover:bg-gray-900 py-2"
+                        >
+                            <img
+                                src="https://picsum.photos/80"
+                                class="rounded-xl"
+                                alt=""
+                            />
+                            <div class="artistInfo w-full">
+                                <p class="font-bold text-sm">
+                                    Art of the Surge
+                                </p>
+                                <p class="text-gray-500 text-sm">LIVE</p>
+                            </div>
+                        </div>
+
+                        <!-- TRENDING -->
+                        <div class="trending flex-col">
+                            <div
+                                class="trend flex justify-between items-center mb-3 hover:cursor-pointer"
+                            >
+                                <div class="trendLeft">
+                                    <p class="text-gray-500 text-[14px]">
+                                        Trending in USA
+                                    </p>
+                                    <p class="font-bold">#Suits</p>
+                                    <p class="text-gray-500 text-[14px]">
+                                        1,109 posts
+                                    </p>
+                                </div>
+                                <i class="material-icons text-gray-500"
+                                    >more_horiz</i
+                                >
+                            </div>
+
+                            <div
+                                class="trend flex justify-between items-center mb-3 hover:cursor-pointer"
+                            >
+                                <div class="trendLeft">
+                                    <p class="text-gray-500 text-[14px]">
+                                        Politics • Trending
+                                    </p>
+                                    <p class="font-bold">Resign</p>
+                                    <p class="text-gray-500 text-[14px]">
+                                        237K posts
+                                    </p>
+                                </div>
+                                <i class="material-icons text-gray-500"
+                                    >more_horiz</i
+                                >
+                            </div>
+
+                            <div
+                                class="trend flex justify-between items-center mb-3 hover:cursor-pointer"
+                            >
+                                <div class="trendLeft">
+                                    <p class="text-gray-500 text-[14px]">
+                                        UEFA Champions League • Trending
+                                    </p>
+                                    <p class="font-bold">Sergio Ramos</p>
+                                    <p class="text-gray-500 text-[14px]">
+                                        14.8K posts
+                                    </p>
+                                </div>
+                                <i class="material-icons text-gray-500"
+                                    >more_horiz</i
+                                >
+                            </div>
+
+                            <div
+                                class="trend flex justify-between items-center mb-3 hover:cursor-pointer"
+                            >
+                                <div class="trendLeft">
+                                    <p class="text-gray-500 text-[14px]">
+                                        News • Trending
+                                    </p>
+                                    <p class="font-bold">#CaliforniWildfires</p>
+                                    <p class="text-gray-500 text-[14px]">
+                                        64.8K posts
+                                    </p>
+                                </div>
+                                <i class="material-icons text-gray-500"
+                                    >more_horiz</i
+                                >
+                            </div>
+
+                            <p class="text-blue-400 cursor-pointer">
+                                Show more
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- WHO TO FOLLOW CARD -->
+                    <div
+                        class="follow flex-col gap-3 border-[0.5px] border-gray-500 rounded-xl p-2 px-4 mb-5"
+                    >
+                        <h1 class="font-bold text-xl mb-5">Who to follow</h1>
+                        <!-- PROFILES -->
+                        <div class="accounts flex-col gap-4">
+                            <div
+                                class="followAccount flex justify-between items-center mb-5"
+                            >
+                                <div class="fAL flex gap-2">
+                                    <img
+                                        src="https://picsum.photos/41"
+                                        class="rounded-3xl"
+                                    />
+                                    <div class="infoAccount">
+                                        <p class="text-sm font-bold">
+                                            Lorem Ipsum
+                                        </p>
+                                        <p class="text-sm text-gray-500">
+                                            @loremipsum
+                                        </p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-white font-bold text-black rounded-full p-2"
+                                >
+                                    Follow
+                                </button>
+                            </div>
+
+                            <div
+                                class="followAccount flex justify-between items-center mb-5"
+                            >
+                                <div class="fAL flex gap-2">
+                                    <img
+                                        src="https://picsum.photos/40"
+                                        class="rounded-3xl"
+                                    />
+                                    <div class="infoAccount">
+                                        <p class="text-sm font-bold">
+                                            Lorem Ipsum
+                                        </p>
+                                        <p class="text-sm text-gray-500">
+                                            @loremipsum
+                                        </p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-white font-bold text-black rounded-full p-2"
+                                >
+                                    Follow
+                                </button>
+                            </div>
+
+                            <div
+                                class="followAccount flex justify-between items-center mb-5"
+                            >
+                                <div class="fAL flex gap-2">
+                                    <img
+                                        src="https://picsum.photos/39"
+                                        class="rounded-3xl"
+                                    />
+                                    <div class="infoAccount">
+                                        <p class="text-sm font-bold">
+                                            Lorem Ipsum
+                                        </p>
+                                        <p class="text-sm text-gray-500">
+                                            @loremipsum
+                                        </p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="bg-white font-bold text-black rounded-full p-2"
+                                >
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-blue-400 cursor-pointer">Show more</p>
+                    </div>
+
+                    <!-- LINKS -->
+                    <div class="links text-[11px] text-gray-500 flex-col gap-2">
+                        <div class="row1 flex gap-4">
+                            <span class="hover:underline cursor-pointer"
+                                >Terms of Service</span
+                            ><span class="hover:underline cursor-pointer"
+                                >Privacy Policy</span
+                            ><span class="hover:underline cursor-pointer"
+                                >Cookie Policy</span
+                            >
+                        </div>
+                        <div class="row2 flex gap-4">
+                            <span class="hover:underline cursor-pointer"
+                                >Accessibility</span
+                            ><span class="hover:underline cursor-pointer"
+                                >Ads info</span
+                            ><span class="hover:underline cursor-pointer"
+                                >More...</span
+                            ><span class="hover:underline cursor-pointer">
+                                © 2025 X Corp.</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
